@@ -2,19 +2,16 @@ from fastapi import FastAPI
 
 app = FastAPI(
     title="BIT Notes LMS API",
-    version="1.0.0"
+    version="1.0.0",
+    description="Backend API for the BIT Notes LMS project.",
 )
 
 
 @app.get("/")
 def root():
-    return {
-        "message": "BIT Notes LMS API is running"
-    }
+    return {"message": "BIT Notes LMS API is running"}
 
 
 @app.get("/api/health")
 def health_check():
-    return {
-        "status": "ok"
-    }
+    return {"status": "ok"}
